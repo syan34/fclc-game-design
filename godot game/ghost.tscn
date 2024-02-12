@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqgnm4ugcylad"]
+
+[ext_resource type="Texture2D" uid="uid://o3kasyd3364t" path="res://pictures/Ghost-Clipart-3-WM.webp" id="1_tjug1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ghost-clipart-3-wm" type="Sprite2D" parent="."]
+modulate = Color(0.517647, 0.662745, 0.933333, 1)
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_tjug1")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cddwlh2k0btqg"]
+
+[ext_resource type="Texture2D" uid="uid://dwr15n01i8lky" path="res://pictures/icon.svg" id="1_u2tbw"]
+[ext_resource type="PackedScene" uid="uid://dqgnm4ugcylad" path="res://ghost.tscn" id="2_ujdka"]
+
+[node name="Main Scene" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(611, 228)
+rotation = -0.00447683
+texture = ExtResource("1_u2tbw")
+
+[node name="ghosts" type="Node2D" parent="."]
+
+[node name="Node2D" parent="ghosts" instance=ExtResource("2_ujdka")]
+
+[node name="Node2D2" parent="ghosts" instance=ExtResource("2_ujdka")]
+
+[node name="Node" type="Node" parent="."]
