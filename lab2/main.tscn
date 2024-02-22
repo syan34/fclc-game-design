@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnaq63srfq6sw"]
+
+[ext_resource type="PackedScene" uid="uid://cnfj62dff342n" path="res://tree.tscn" id="1_t7nqt"]
+[ext_resource type="Texture2D" uid="uid://cqo2n4g8hqrld" path="res://icon.svg" id="2_inr82"]
+[ext_resource type="Script" path="res://forests.gd" id="3_4qhgt"]
+[ext_resource type="Script" path="res://character.gd" id="3_lcvbk"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(44, 245)
+texture = ExtResource("2_inr82")
+script = ExtResource("3_lcvbk")
+
+[node name="forests" type="Node2D" parent="."]
+script = ExtResource("3_4qhgt")
+
+[node name="fast tree" parent="forests" instance=ExtResource("1_t7nqt")]
+position = Vector2(636, 263)
+
+[node name="slow tree" parent="forests" instance=ExtResource("1_t7nqt")]
+position = Vector2(97, 307)
+scale = Vector2(3, 3)
+
+[node name="little tree" parent="forests" instance=ExtResource("1_t7nqt")]
+position = Vector2(376, 227)
