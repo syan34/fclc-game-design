@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://beof66seinugi"]
+
+[ext_resource type="Texture2D" uid="uid://budsjwfj2ks16" path="res://icon.svg" id="1_wokam"]
+[ext_resource type="PackedScene" uid="uid://iv80y2xqr08v" path="res://puppy_.tscn" id="2_dmkga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6cbi"]
+size = Vector2(128.5, 638.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1058, 70)
+texture = ExtResource("1_wokam")
+
+[node name="rider" parent="." instance=ExtResource("2_dmkga")]
+position = Vector2(-46, -43)
+
+[node name="puppy" parent="." instance=ExtResource("2_dmkga")]
+position = Vector2(-30, 675)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(779, 326)
+shape = SubResource("RectangleShape2D_x6cbi")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://iv80y2xqr08v"]
+
+[ext_resource type="Script" path="res://puppy_.gd" id="1_7uvg6"]
+[ext_resource type="Texture2D" uid="uid://d2geulbukgopp" path="res://puppy.jpeg" id="1_tdlb7"]
+[ext_resource type="Texture2D" uid="uid://budsjwfj2ks16" path="res://icon.svg" id="2_22c1e"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_ekxip"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08aa5"]
+radius = 342.812
+
+[node name="puppy_" type="Node2D"]
+script = ExtResource("1_7uvg6")
+
+[node name="rider" type="Sprite2D" parent="."]
+position = Vector2(292, 208)
+scale = Vector2(0.3975, 0.3975)
+texture = ExtResource("1_tdlb7")
+
+[node name="puppy" type="Sprite2D" parent="."]
+position = Vector2(136, 166)
+texture = ExtResource("2_22c1e")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_ekxip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_08aa5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
