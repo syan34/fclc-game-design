@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2wm3ikx2bxqm"]
+
+[ext_resource type="Texture2D" uid="uid://gddj6ywiug60" path="res://icon.svg" id="1_4w1nf"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_6qjci"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mvq3"]
+size = Vector2(726, 128)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pg12m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_honlf"]
+
+[sub_resource type="TileSet" id="TileSet_pjfj3"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(68, 73)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_6qjci")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_4w1nf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(290, 205)
+shape = SubResource("RectangleShape2D_6mvq3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_pg12m")
+constant_linear_velocity = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_honlf")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -68.0
+offset_top = 145.0
+offset_right = 649.0
+offset_bottom = 268.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(495, 80)
+scale = Vector2(-1525.87, -2923.58)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_pjfj3")
+format = 2
