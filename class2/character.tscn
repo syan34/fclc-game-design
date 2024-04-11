@@ -19,7 +19,7 @@ position = Vector2(68, 73)
 script = ExtResource("1_6qjci")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(11, -116)
 texture = ExtResource("1_4w1nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -30,14 +30,14 @@ shape = SubResource("RectangleShape2D_6mvq3")
 physics_material_override = SubResource("PhysicsMaterial_pg12m")
 constant_linear_velocity = Vector2(1, 1)
 
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -67.0
+offset_top = 141.0
+offset_right = 650.0
+offset_bottom = 264.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_honlf")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = -68.0
-offset_top = 145.0
-offset_right = 649.0
-offset_bottom = 268.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(495, 80)
