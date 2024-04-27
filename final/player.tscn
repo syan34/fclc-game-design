@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7m3g73spr0w4"]
+
+[ext_resource type="Texture2D" uid="uid://bbgdtrw3hag7m" path="res://Assets/spaceship_red.png" id="1_cjoby"]
+[ext_resource type="Script" path="res://player.gd" id="1_t6du6"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_t6du6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.1408
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cjoby")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-49, 13, -49, 1, -37, -2, -36, -23, -26, -24, -24, -5, -22, -5, -18, -14, -9, -14, -6, -23, -1, -42, 2, -42, 6, -25, 8, -18, 11, -8, 14, -8, 15, -16, 20, -7, 22, -7, 24, -25, 35, -24, 36, -1, 50, -1, 50, 13, 37, 16, 26, 21, 23, 28, -22, 28, -26, 20, -39, 19)
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(0, -54)
