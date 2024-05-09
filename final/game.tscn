@@ -15,6 +15,7 @@ enemy_scenes = Array[PackedScene]([ExtResource("4_asrvn"), ExtResource("4_2nlvm"
 [node name="HUD" parent="UILayer" instance=ExtResource("4_r5esp")]
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
+wait_time = 0.3
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource("2_hr7mc")]
@@ -28,4 +29,8 @@ gizmo_extents = 50.0
 
 [node name="EnemyContainer" type="Node" parent="."]
 
+[node name="CountDownTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
+[connection signal="timeout" from="CountDownTimer" to="." method="_on_count_down_timer_timeout"]
